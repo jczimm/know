@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>&bull;</title>
+</head>
+
+<body>
+    <script>
+    var rel = location.href.substr(17, Infinity);
+    if (rel.substr(0, 3) === "/r/") {
+        var id = rel.substr(3, Infinity);
+        if (/^\d/.test(id)) {
+        	var cat = id.match(/\d/)[0],
+        		title = id.split(cat)[1].substr(1);
+        	var url = "http://know.jczimm.com/archives/" + cat + "?t=" + title;
+        	location.href = url;
+        }
+    }
+    </script>
+</body>
+
+</html>

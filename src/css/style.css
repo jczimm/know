@@ -1,0 +1,170 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:200,800,200italic,800italic|Merriweather:400italic);
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+#wrapper {
+    padding-right: 20px;
+    width: 75%;
+    word-wrap: break-word;
+    margin: 0px auto;
+}
+header {
+    color: #000;
+    font-family: "Exo 2", sans-serif;
+    font-size: 60px;
+    line-height: 2em;
+}
+hr {
+    background-color: #f7f7f7;
+    height: 5px;
+    width: calc(100% + 20px);
+    border: none;
+}
+#headline, #more {
+    width: 100%;
+    margin: 0px auto;
+}
+header {
+    text-align: center;
+}
+blockquote {
+    padding: 0.5em;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-style: italic;
+    font-size: 1.5em;
+    font-family: "Merriweather", serif;
+    margin-bottom: 12px;
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.15em;
+    vertical-align: -0.4em;
+}
+#date {
+    font-family: Monospace;
+    font-size: 1em;
+    color: #ccc;
+}
+#more > a {
+    display: block;
+    line-height: 2em;
+    text-indent: -2em;
+    position: relative;
+    left: 1.5em;
+    font-family: "Merriweather", serif;
+    font-size: 1.3em;
+    font-style: italic;
+}
+#more > a:before {
+    color: #ccc;
+    content: ">";
+    font-size: 1.3em;
+    line-height: 0.1em;
+    margin-right: 0.5em;
+    vertical-align: -0.15em;
+}
+a {
+    text-decoration: none;
+}
+/**/
+
+/* LOADER */
+
+.waiting {
+    position: absolute;
+    left: 50%;
+    height: 100px;
+    margin-left: -250px;
+    margin-top: -70px;
+    display: block;
+    width: 500px;
+}
+.waiting .status {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 34px;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+.loader {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 10px;
+}
+/* ooo, css circles*/
+
+.circle {
+    display: inline-block;
+    position: relative;
+    height: 95px;
+    /* key up the animations! */
+    -webkit-animation: dotloader 2.5s infinite;
+    -moz-animation: dotloader 2.5s infinite;
+    -ms-animation: dotloader 2.5s infinite;
+    -o-animation: dotloader 2.5s infinite;
+    animation: dotloader 2.5s infinite;
+}
+.circle + .circle {
+    margin-left: -25px;
+    /* staggered effect cause by delay property */
+    -webkit-animation: dotloader 2.5s 0.4s infinite;
+    -moz-animation: dotloader 2.5s 0.4s infinite;
+    -ms-animation: dotloader 2.5s 0.4s infinite;
+    -o-animation: dotloader 2.5s 0.4s infinite;
+    animation: dotloader 2.5s 0.4s infinite;
+}
+.circle + .circle + .circle {
+    margin-left: -25px;
+    -webkit-animation: dotloader 2.5s 0.8s infinite;
+    -moz-animation: dotloader 2.5s 0.8s infinite;
+    -ms-animation: dotloader 2.5s 0.8s infinite;
+    -o-animation: dotloader 2.5s 0.8s infinite;
+    animation: dotloader 2.5s 0.8s infinite;
+}
+.circle + .circle + .circle + .circle {
+    margin-left: -25px;
+    -webkit-animation: dotloader 2.5s 1.2s infinite;
+    -moz-animation: dotloader 2.5s 1.2s infinite;
+    -ms-animation: dotloader 2.5s 1.2s infinite;
+    -o-animation: dotloader 2.5s 1.2s infinite;
+    animation: dotloader 2.5s 1.2s infinite;
+}
+/* here be the animations matey! */
+
+@-webkit-keyframes "dotloader" {
+    0%, 30% {
+        width: 4px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        left: 0%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.5);
+        left: 50%;
+        width: 40px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    60%, 100% {
+        width: 4px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        left: 100%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
